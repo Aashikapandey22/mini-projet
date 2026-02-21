@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Library</h1>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Add Book</h2>
+                <div class="form">
+                    <input id="titleInput" placeholder="Book title" type="text">
+                    <input id="authorInput" placeholder="Author" type="text">
+                    <select id="categoryInput">
+                        <option value="">Select Category</option>
+                        <option>Fiction</option>
+                        <option>Tech</option>
+                        <option>History</option>
+                        <option>Science</option>
+                    </select>
+                    <button onclick="addOrUpdateBook()">Add Book</button>
+                </div>
+            </section>
+
+            <section class="search-section">
+                <input id="searchInput" placeholder="Search books..." type="text" oninput="searchBooks()">
+                <select id="sortSelect" onchange="sortBooks()">
+                    <option value="">Sort by</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="category">Category</option>
+                </select>
+                <button onclick="exportData()">Export</button>
+                <input type="file" id="importFile" hidden accept=".json">
+                <button onclick="document.getElementById('importFile').click()">Import</button>
+            </section>
+
+            <div id="bookList" class="book-list"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
