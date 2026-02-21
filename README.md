@@ -76,7 +76,7 @@ This project demonstrates:
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 
 
-Your Name  
-Mini Project – Frontend Web Development  
+AASHIKA PANDEY  
+Mini Project
